@@ -1,0 +1,270 @@
+/* ==========================================================================
+   TaskFlow Responsive Styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Tablet Layout (768px - 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Typography Scaling */
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+
+  /* Hero Section */
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-subheading {
+    margin: 0 auto;
+  }
+
+  .hero-cta-wrapper {
+    justify-content: center;
+  }
+
+  .hero-trust {
+    align-items: center;
+  }
+
+  .hero-visual {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Features Grid - 2 columns */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Pricing Grid - Stack or 2-columns (with Enterprise centered on next row) */
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 768px;
+  }
+
+  .pricing-card.professional-plan {
+    transform: scale(1);
+  }
+
+  .pricing-card.professional-plan:hover {
+    transform: scale(1.03) translateY(-4px);
+  }
+
+  .pricing-card:nth-child(3) {
+    grid-column: span 2;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Blog Grid - 2 columns */
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Contact Section */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-details {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .contact-item {
+    text-align: left;
+  }
+
+  .contact-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Footer Layout */
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+    text-align: center;
+    align-items: center;
+  }
+
+  .brand-desc {
+    max-width: 450px;
+  }
+}
+
+/* ==========================================================================
+   Mobile Layout (< 768px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Typography Scaling */
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  
+  /* Sections Vertical Spacing */
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* Header & Mobile Drawer Navigation */
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--bg-secondary);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    border-top: 1px solid var(--border-color);
+    transition: left var(--transition-normal) ease-in-out;
+  }
+
+  .nav-menu.open {
+    left: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-link {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: calc(var(--header-height) + 30px);
+    padding-bottom: 50px;
+  }
+
+  .hero-cta-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-wrapper .btn {
+    width: 100%;
+  }
+
+  .trust-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* Features - 1 column layout */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+
+  /* Pricing - 1 column layout */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pricing-card {
+    padding: 30px 24px;
+  }
+
+  .pricing-card.professional-plan {
+    transform: none;
+  }
+
+  .pricing-card.professional-plan:hover {
+    transform: translateY(-4px);
+  }
+
+  .pricing-card:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  /* Blog - 1 column layout */
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .blog-card-body {
+    padding: 16px 20px 20px 20px;
+  }
+
+  /* Contact Form adjustments */
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .contact-form-wrapper {
+    padding: 24px 20px;
+  }
+
+  /* Footer Layout - 1 column */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-col {
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding-bottom: 30px;
+  }
+}
